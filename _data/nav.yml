@@ -7,11 +7,11 @@ links:
 - title: Publications
   url: publications.html
 
-- title: Blog
-  url: blog.html
+# - title: Blog
+#   url: blog.html
 
 - title: Vitae
-  url: /assets/pdf/vitae.pdf
+  url: /assets/pdf/ssw_resume_English.pdf
 
-- title: Contact
-  url: contact.html
+# - title: Contact
+#   url: contact.html
