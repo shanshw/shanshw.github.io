@@ -14,4 +14,4 @@ Her research interests rely on **The Reliablity of Software Systems**. In partic
 
 *[2024/03]* First-authored paper on configuration error localization via logs has been accepted by **ISSTA 2024**!
 
-*[2023/07]* I had an wonderful journery as a visiting student in <a href="http://ariselab.cse.cuhk.edu.hk/" class="highlighted">ARISE Lab</a> in CUHK, thanks for the warm welcoming!
+*[2023/07]* I had a wonderful journery as a visiting student in <a href="http://ariselab.cse.cuhk.edu.hk/" class="highlighted">ARISE Lab</a> in CUHK, thanks for the warm welcoming!

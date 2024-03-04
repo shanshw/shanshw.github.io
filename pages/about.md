@@ -9,7 +9,7 @@ last-updated: 2024-03-02 4:47 PM
 
 <h1 class="mx-auto" style="font-family:Courgette;">{{ page.title }}</h1>
 
-Hey, this is Shiwen Shan (单诗雯)
+Hey, this is Shiwen Shan (单诗雯)😊
 
 
 
@@ -17,5 +17,7 @@ Hey, this is Shiwen Shan (单诗雯)
 <!-- ```java -->
 <!-- ``` -->
 
-My research interests include system and software engineering.
+My research interests include system and software engineering. I am particularly interested in the reliability of software systems and hoping to do some awesome research!
+
+Currently, I am diving into the filed of <a href="https://webassembly.org/" class="highlighted">WebAssembly</a>. Looking forward to some wonderful findings!
 
