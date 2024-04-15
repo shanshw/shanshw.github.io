@@ -4,14 +4,20 @@ links:
 - title: About
   url: about.html
 
+- title: Updating News
+  url: news.html
+
 - title: Publications
   url: publications.html
 
 # - title: Blog
 #   url: blog.html
 
-- title: Vitae
+- title: Vitae(EN)
   url: /assets/pdf/ssw_resume_English.pdf
+
+- title: Vitae(CN)
+  url: /assets/pdf/ssw_resume_Chinese.pdf
 
 # - title: Contact
 #   url: contact.html

@@ -8,10 +8,4 @@ Currently, she is an undergraduate student in Sun Yat-sen University. However, s
 <a href="https://yxsu.github.io/" class="highlighted">Prof. Su</a> and <a href="https://www.zibinzheng.com/" class="highlighted">Prof. Zheng</a> in 2024 Fall.
 <!-- [<font color='blue'>Prof. Su</font>](https://yxsu.github.io/) and [<font color='blue'>Prof. Zheng</font>](https://www.zibinzheng.com/). -->
 
-Her research interest lies in **The Reliablity of Software Systems**. In particular, she finds it interesting and exciting to explore the filed of **Debugging** and **Fuzzing**. Feel free to <a href="/contact.html">contact her</a> for discussions and cooperations!
-
-<a href="/news.html" class="highlighted">Updating News</a>
-
-*[2024/03]* First-authored paper on configuration error localization via logs has been accepted by **ISSTA 2024**!
-
-*[2023/07]* I had a wonderful journery as a visiting student in <a href="http://ariselab.cse.cuhk.edu.hk/" class="highlighted">ARISE Lab</a> in CUHK, thanks for the warm welcoming!
+Her research interest lies in **The Reliablity of Software Systems**. In particular, she finds it interesting and exciting to explore the filed of **Distributed Systems** and **Operating Systems**. Feel free to <a href="/contact.html">contact her</a> for discussions and cooperations!
