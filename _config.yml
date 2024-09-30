@@ -117,7 +117,7 @@ exclude:
 #========================================#
 scholar:
   last_name: Shan
-  style: mla
+  style: apa
   locale: en
   source: /_bibliography/
   bibliography: papers.bib
