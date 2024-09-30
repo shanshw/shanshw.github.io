@@ -30,8 +30,16 @@ layout: default
   <div class="row">
     <div class="col-md-4">
       {% if site.animate %}
-      <img src="{{ site.profile_image }}"
-        class="img-thumbnail float-left animate__animated animate__fadeInLeft shadow bg-white rounded" alt="...">
+      <!-- <img src="{{ site.profile_image }}"
+        class="img-thumbnail d-block mx-auto animate__animated animate__fadeInLeft shadow bg-white rounded" alt="..."
+        height="150" width="150"> -->
+      <div class="image-container">
+        <img src="{{ site.profile_image }}"
+          class="img-thumbnail animate__animated animate__fadeInLeft shadow bg-white rounded" alt="..." height="200"
+          width="200">
+      </div>
+
+
       {% else %}
       <img src="{{ site.profile_image }}" class="img-thumbnail float-left" alt="...">
       {% endif %}
@@ -105,15 +113,16 @@ layout: default
           </div>
           {% elsif section.name == "Projects" %}
           <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
-            <p><i>{{section.description}}</i></p>
+            <!-- <p><i>{{section.description}}</i></p> -->
             {% for projects in site.data.projects %}
             <div class="media mt-2">
               <a href="{{ projects.link }}"><img src="{{ projects.image }}" class="mr-3 mb-2 img-thumbnail border-0"
-                  alt="..."></a>
+                  alt="..." height="500" width="500"></a>
               <div class="media-body">
                 <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
                 {{ projects.description }}
                 {% if projects.tech %}
+                <p></p>
                 <h6><mark><u>Technologies</u></mark></h6>
                 {% for tech in projects.tech %}
                 <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech
@@ -151,10 +160,33 @@ layout: default
             {% endfor %}
           </div>
         </div>
+        {% elsif section.name == "Education" %}
+        <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
+          <p><i>{{section.description}}</i></p>
+          {% for edu in site.data.education %}
+          <div class="list-group">
+            <div class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <p style="font-family: Arial, sans-serif; font-size: 16px;  font-style: italic; text-align: left;">
+                  <img src="/assets/img/OIP.jpg" width="30" height="30">
+                  {{edu.School}}, {{edu.Program}}
+                </p>
+                <p class="mb-1"
+                  style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-align: left;">
+                  {{edu.Degree}}</p>
+                <p class="mb-1"
+                  style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-align: left;">{{
+                  edu.StartDate }} - {{ edu.EndDate }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
         {% else %}
         <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
           <h5 class="card-title text-center"><a href="/{{ section.url }}"
-              class="highlighted">{{section.description}}</a></h5>
+              class="highlighted">{{section.description}}</a>
+          </h5>
           <p class="card-text">{{ section.content }} </p>
         </div>
         {% endif %}

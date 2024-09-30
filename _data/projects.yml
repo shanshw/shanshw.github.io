@@ -1,12 +1,16 @@
-- name: LogFuzz
-  id: project1
+- name: LogConfigLocalizer
+  id: 1
   description: >
-    The tool is developed on top of JQF.
+    The automation tool is employed to localize configuration errors via logs with empowered LLMs. 
   date: true
-  link: https://example.com
-  image:  http://placehold.it/100x100
+  link: https://github.com/shanshw/LogConfigLocalizer
+  image:  /assets/img/projects/lcg.png
   tech: 
     - Java
+    - Python
+    - Maven
+    - LLMs
+
 
 
 # - name: Project 2

@@ -18,6 +18,3 @@ Hey, this is Shiwen Shan (单诗雯)😊
 <!-- ``` -->
 
 My research interest includes system and software engineering. I am particularly interested in the reliability of software systems and hoping to do some awesome researches!
-
-Currently, I am diving into the filed of distributed systems. Looking forward to some wonderful findings.
-

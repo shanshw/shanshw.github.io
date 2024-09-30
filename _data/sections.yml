@@ -12,20 +12,29 @@
 #   url: news.html
 #   first: false
 
-- name: Teaching
-  id: teaching
-  description: 
+# - name: Teaching
+#   id: teaching
+#   description: 
+#   content: 
+#   url: teaching.html
+#   first: false
+
+# - name: Education
+#   id: education
+#   description: 
+#   content: 
+#   url: education.html
+#   first: false
+
+- name: Projects
+  id: projects
+  description: Some engineering projects.
   content: 
-  url: teaching.html
+  url: projects.html
   first: false
 
 
-# - name: Projects
-#   id: projects
-#   description: Some engineering projects.
-#   content: 
-#   url: projects.html
-#   first: false
+
 
 
 

@@ -1,6 +1,12 @@
 - School: Sun Yat-sen University
-  Degree: 
+  Degree: Bachelor's Degree
   Program: School of Software Engineering
-  Start Date: 2020-09-10
-  End Date: 2024-06-30
+  StartDate: 2020/09
+  EndDate: 2024/06
   # Icon:      # Make this icon small, think 30px/30px
+
+- School: Sun Yat-sen University
+  Degree: Phd Candidate
+  Program: School of Software Engineering
+  StartDate: 2024/09
+  EndDate: Current

@@ -20,7 +20,7 @@ image_alt:     # image description
 # -----------SITE SETTINGS---------------#
 #========================================#: 
 author: Shiwen Shan
-profile_image: /assets/img/avatar/personal.jpeg 
+profile_image: /assets/img/avatar/personal.jpg
 occupation: 
 snippet:
 twitter: 
@@ -117,7 +117,7 @@ exclude:
 #========================================#
 scholar:
   last_name: Shan
-  style: apa
+  style: mla
   locale: en
   source: /_bibliography/
   bibliography: papers.bib
@@ -125,7 +125,7 @@ scholar:
   replace_strings: true
   join_strings: true
   details_dir: bibliography
-  details_layout: bibtex.html
+  details_layout: bib.html
   details_link: 
   query: "@*"
 
