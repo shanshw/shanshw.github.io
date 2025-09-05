@@ -124,9 +124,6 @@ scholar:
   bibliography_template: bib
   replace_strings: true
   join_strings: true
-  details_dir: false
-  details_layout: false
-  details_link: false
   query: "@*"
 
 # =======================================#
