@@ -1,16 +1,29 @@
+- name: News
+  id: news
+  description: Updating news.
+  content: 
+  url: news.html
+  first: true
+  emoji: 📰
+  jsid: news-tab
+
 - name: Publications
   id: publications
   description: Some selected publications.
   content:
   url: publications.html
-  first: true
+  first: false
+  emoji: 📚
+  jsid: publications-tab
 
-# - name: News
-#   id: news
-#   description: Updating news.
-#   content: 
-#   url: news.html
-#   first: false
+- name: Projects
+  id: projects
+  description: Some engineering projects.
+  content: 
+  url: projects.html
+  first: false
+  emoji: 🚀
+  jsid: projects-tab
 
 # - name: Teaching
 #   id: teaching
@@ -21,17 +34,12 @@
 
 # - name: Education
 #   id: education
-#   description: 
+#   description: Academic background and achievements.
 #   content: 
 #   url: education.html
 #   first: false
-
-- name: Projects
-  id: projects
-  description: Some engineering projects.
-  content: 
-  url: projects.html
-  first: false
+#   emoji: 🎓
+#   jsid: education-tab
 
 
 

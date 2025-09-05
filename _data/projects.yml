@@ -1,3 +1,16 @@
+- name: ConfLogger
+  id: 2
+  description: >
+    The configuration logging framework is designed to enhance configuration diagnosability via automatically generated configuration logs. 
+  date: true
+  link: https://github.com/shanshw/ConfLogger
+  image:  /assets/img/projects/cf.png
+  implementation:
+    - Java
+  tech: 
+    - Program Analysis
+    - LLMs
+
 - name: LogConfigLocalizer
   id: 1
   description: >
@@ -5,10 +18,10 @@
   date: true
   link: https://github.com/shanshw/LogConfigLocalizer
   image:  /assets/img/projects/lcg.png
-  tech: 
+  implementation:
     - Java
     - Python
-    - Maven
+  tech: 
     - LLMs
 
 

@@ -35,15 +35,15 @@ layout: default
         height="150" width="150"> -->
       <div class="image-container">
         <img src="{{ site.profile_image }}"
-          class="img-thumbnail animate__animated animate__fadeInLeft shadow bg-white rounded" alt="..." height="200"
-          width="200">
+          class="img-thumbnail animate__animated animate__fadeInLeft shadow bg-white rounded-circle" alt="..." height="200"
+          width="200" style="object-fit: cover;">
       </div>
 
 
       {% else %}
       <img src="{{ site.profile_image }}"
-        class="img-thumbnail animate__animated animate__fadeInLeft shadow bg-white rounded" alt="..." height="200"
-        width="200"> {% endif %}
+        class="img-thumbnail animate__animated animate__fadeInLeft shadow bg-white rounded-circle" alt="..." height="200"
+        width="200" style="object-fit: cover;"> {% endif %}
     </div>
     <!-- EDUCATION SECTION -->
     <div class="col-md-8">
@@ -76,14 +76,14 @@ layout: default
           {% for section in site.data.sections %}
           {% if section.first %}
           <li class="nav-item">
-            <a class="nav-link shadow-none" id="{{ section.jsid }}" href="#{{section.id}}" role="tab"
+            <a class="nav-link shadow-none" id="{{ section.jsid }}" href="#{{section.id}}" role="tab" data-toggle="tab"
               aria-controls="{{section.id}}" aria-selected="true"
               style="font-family:{{ theme.font}};color:{{ theme.home-highlight-header-text}};">{{section.emoji}}
               {{section.name}}</a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" id="{{ section.jsid }}" href="#{{section.id}}" role="tab" aria-controls="{{section.id}}"
+            <a class="nav-link" id="{{ section.jsid }}" href="#{{section.id}}" role="tab" data-toggle="tab" aria-controls="{{section.id}}"
               aria-selected="true"
               style="font-family:{{ theme.font}};color:{{ theme.home-highlight-header-text}};">{{section.emoji}}
               {{section.name}}</a>
@@ -99,7 +99,21 @@ layout: default
           {% if section.name == "Publications" %}
           <div class="tab-pane active overflow-auto" id="{{section.id}}" role="tabpanel">
             <p><i>{{section.description}}</i></p>
-            <p class="card-text">{% bibliography -f papers %}</p>
+            <div class="card-text" style="width: 100%;">{% bibliography -f papers --query @*[selected=1] %}</div>
+            <p class="text-center mt-3">
+              <a href="/publications.html" class="highlighted">View All Publications</a>
+            </p>
+          </div>
+          {% elsif section.name == "News" %}
+          <div class="tab-pane active overflow-auto" id="{{section.id}}" role="tabpanel">
+            <p><i>{{section.description}}</i></p>
+            <div class="card-text">
+              <p><strong>[2025/08]</strong> 🎉 Happy to be a visiting student in Singapore Management University (SMU), as a part of <a href="https://rise.smu.edu.sg/" class="highlighted">RISE Lab</a>, under the supervision of <a href="https://yintonghuo.github.io/" class="highlighted">Prof. Yintong Huo</a>!</p>
+              <p><strong>[2025/06]</strong> 🚀 First-authored paper on improving configuration diagnosibility via proactive logging has been accepted by <strong>ICSE 2026</strong> (60/660, 9.1%)! Check here for the <a href="https://arxiv.org/pdf/2508.20977" class="highlighted">preprint</a>!</p>
+              <p><strong>[2024/09]</strong> 🎉 Proud to be a PhD student in Sun Yat-sen University.</p>
+              <p><strong>[2024/03]</strong> 🚀 First-authored paper on configuration error localization via logs has been accepted by <strong>ISSTA 2024</strong>!</p>
+              <p><strong>[2023/07]</strong> 🎉 Had a wonderful journey as a visiting student in <a href="http://ariselab.cse.cuhk.edu.hk/" class="highlighted">ARISE Lab</a> in CUHK, thanks for the warm welcoming! 😊</p>
+            </div>
           </div>
           {% else %}
           <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
@@ -107,7 +121,15 @@ layout: default
           </div>
           {% endif %}
           {% else %}
-          {% if section.name == "Presentations" %}
+          {% if section.name == "Publications" %}
+          <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
+            <p><i>{{section.description}}</i></p>
+            <p class="card-text">{% bibliography -f papers --query @*[selected=1] %}</p>
+            <p class="text-center mt-3">
+              <a href="/publications.html" class="highlighted">View All Publications</a>
+            </p>
+          </div>
+          {% elsif section.name == "Presentations" %}
           <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
             <p><i>{{section.description}}</i></p>
             <p class="card-text">{% bibliography -f presentations %}</p>
@@ -116,20 +138,34 @@ layout: default
           <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
             <!-- <p><i>{{section.description}}</i></p> -->
             {% for projects in site.data.projects %}
-            <div class="media mt-2">
-              <a href="{{ projects.link }}"><img src="{{ projects.image }}" class="mr-3 mb-2 img-thumbnail border-0"
-                  alt="..." height="500" width="500"></a>
-              <div class="media-body">
-                <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
-                {{ projects.description }}
-                {% if projects.tech %}
-                <p></p>
-                <h6><mark><u>Technologies</u></mark></h6>
-                {% for tech in projects.tech %}
-                <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech
-                  }}</span>
-                {% endfor %}
-                {% endif %}
+            <div class="project-item mb-4 pb-4" style="border-bottom: 2px solid #e9ecef;">
+              <div class="d-flex align-items-center justify-content-center mb-3">
+                <span class="badge mr-3" style="font-size: 0.9em; padding: 6px 10px; background-color: #ffc107; color: #000; border: 2px solid #ffc107;">{{ forloop.index }}</span>
+                <h4 class="mb-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h4>
+              </div>
+              <div class="media">
+                <a href="{{ projects.link }}">
+                  <img src="{{ projects.image }}" 
+                       class="mr-3 mb-2 img-thumbnail border-0 project-image" 
+                       alt="{{ projects.name }}" 
+                       style="max-width: 400px; max-height: 250px; width: auto; height: auto; object-fit: contain;">
+                </a>
+                <div class="media-body">
+                  <p class="mb-3">{{ projects.description }}</p>
+                  {% if projects.implementation %}
+                  <h6><mark><u>Implementation</u></mark></h6>
+                  {% for impl in projects.implementation %}
+                  <span class="badge badge-info mr-1 mb-1">{{ impl }}</span>
+                  {% endfor %}
+                  <div class="mb-3"></div>
+                  {% endif %}
+                  {% if projects.tech %}
+                  <h6><mark><u>Technologies</u></mark></h6>
+                  {% for tech in projects.tech %}
+                  <span class="badge mr-1 mb-1" style="background-color: #6c757d; color: #fff;">{{ tech }}</span>
+                  {% endfor %}
+                  {% endif %}
+                </div>
               </div>
             </div>
             {% endfor %}
@@ -164,8 +200,8 @@ layout: default
         {% elsif section.name == "Education" %}
         <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
           <p><i>{{section.description}}</i></p>
-          {% for edu in site.data.education %}
           <div class="list-group">
+            {% for edu in site.data.education %}
             <div class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <p style="font-family: Arial, sans-serif; font-size: 16px;  font-style: italic; text-align: left;">
@@ -180,8 +216,8 @@ layout: default
                   edu.StartDate }} - {{ edu.EndDate }}</p>
               </div>
             </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
         {% else %}
         <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
@@ -231,3 +267,50 @@ layout: default
   <script>
     $('.show').show()
   </script>
+
+  <style>
+    /* 为不同项目设置不同的图片尺寸 */
+    .project-image[alt="ConfLogger"] {
+      max-width: 250px !important;
+      max-height: 300px !important;
+    }
+    
+    .project-image[alt="LogConfigLocalizer"] {
+      max-width: 450px !important;
+      max-height: 200px !important;
+    }
+    
+    /* 为最后一个项目移除底部分割线 */
+    .project-item:last-child {
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+    }
+    
+    /* 优化 Publications 部分的宽度 */
+    #publications .bibliography {
+      width: 100% !important;
+    }
+    
+    #publications .bibliography .row {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    
+    #publications .bibliography .col-sm-8 {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+    }
+    
+    #publications .bibliography .col-sm-4 {
+      display: none !important;
+    }
+    
+    #publications .bibliography ol {
+      width: 100% !important;
+    }
+    
+    #publications .bibliography li {
+      width: 100% !important;
+    }
+  </style>
