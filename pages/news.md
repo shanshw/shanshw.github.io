@@ -9,6 +9,8 @@ last-updated: 2024-03-02 4:47 PM
 
 <h1 class="mx-auto" style="font-family:Courgette;">{{ page.title }}</h1>
 
+*[2025/12]* 🎉 One first-authored paper on effective log compression has been accepted by **ICSE 2026**! The preprint will be available soon.
+
 *[2025/06]* 🚀 First-authored paper on improving configuration diagnosibility via proactive logging has been accepted by **ICSE 2026**! Check here for the <a href="https://arxiv.org/pdf/2508.20977" class="highlighted">preprint</a>!
 
 *[2024/09]* 🎉 Proud to be a PhD student in Sun Yat-sen University.
