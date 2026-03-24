@@ -1,3 +1,17 @@
+- name: LogFold
+  id: 3
+  description: >
+    The log compressor is designed to identify cross-template redundancies (i.e., the structured tokens) and propose the hybrid encoding strategy (i.e., the mixed-type encoding) for log compression.
+  date: true
+  link: https://github.com/shanshw/LogFold
+  image:  /assets/img/projects/lf.png
+  implementation:
+    - Rust
+    - C++
+  tech: 
+    - Encoding
+
+
 - name: ConfLogger
   id: 2
   description: >

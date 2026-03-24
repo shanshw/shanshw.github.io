@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
-ruby "3.1.7"
+ruby "3.2.2"
 
 gem "jekyll", "~> 4.3.0"
 gem "jekyll-feed", "~> 0.12"
-gem "jekyll-scholar", "~> 6.0"
+gem "jekyll-scholar", "~> 7.0"
 gem "jekyll-environment-variables", "~> 1.0"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

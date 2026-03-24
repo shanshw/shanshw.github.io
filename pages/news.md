@@ -9,7 +9,7 @@ last-updated: 2024-03-02 4:47 PM
 
 <h1 class="mx-auto" style="font-family:Courgette;">{{ page.title }}</h1>
 
-*[2025/12]* 🎉 One first-authored paper on effective log compression has been accepted by **ICSE 2026**! Please check for the <a href="https://arxiv.org/pdf/2603.20618">preprint</a>!
+*[2025/12]* 🎉 One first-authored paper on effective log compression has been accepted by **ICSE 2026**! Please check for the <a href="https://arxiv.org/pdf/2603.20618" class="highlighted">preprint</a>!
 
 *[2025/06]* 🚀 First-authored paper on improving configuration diagnosibility via proactive logging has been accepted by **ICSE 2026**! Check here for the <a href="https://arxiv.org/pdf/2508.20977" class="highlighted">preprint</a>!
 
